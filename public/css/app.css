@@ -1,0 +1,14 @@
+:root {
+    --color-white: #C1C9D3;
+    --color-gray: #646B74;
+
+    --bg-main: #343A3F;
+    --bg-black: #2B3136;
+
+    --border-main: #3B4146;
+    --border-black: #33393E;
+
+    --btn-purple: #6841DB;
+    --btn-purple-hover: #CC4172;
+    --btn-pink: #E54980;
+}
