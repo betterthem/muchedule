@@ -1,8 +1,10 @@
 @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
 
-html {font-size:10px;}
-body, input, button, textarea, select {font-family:"Noto Sans KR", sans-serif;font-size:1.4rem;box-sizing: border-box}
-body {margin:0;padding:0;height:100%; background-color: #343A3F; color:#FFF;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+* {box-sizing: border-box;}
+
+html {font-size:10px; height:100%;}
+body, input, button, textarea, select {font-family:"Noto Sans KR", sans-serif;font-size:1.4rem;box-sizing: border-box;-webkit-transform-style: preserve-3d;-webkit-backface-visibility: hidden;}
+body {margin:0;padding:0;height:100%; background-color: #343A3F; color:#C1C9D3;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 html, h1, h2, h3, h4, h5, h6, form, fieldset, img, input, button, select {margin:0;padding:0}
 ul,li,ol,dl,dd,dt {list-style:none;padding:0;margin:0}
 label, input, button, select, img {vertical-align:middle}
@@ -14,8 +16,8 @@ p {margin:0;padding:0;word-break:break-all}
 hr {display:none}
 pre {overflow-x:scroll}
 fieldset {border:0}
-a, a:link {color: #333D4B; text-decoration:none;}
-a:hover {text-decoration:none;color:#333D4B}
-a:focus, a:active {color:#333D4B;text-decoration:none}
+a, a:link {color:inherit;text-decoration:none;}
+a:focus, a:active {color:inherit;text-decoration:none}
 input:-webkit-autofill {-webkit-box-shadow:0 0 0px 1000px #ffffff75 inset;}
 input, select, textarea {background: #fff; color: #222;}
+

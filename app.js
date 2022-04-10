@@ -8,7 +8,6 @@ require('dotenv').config();
 const PORT = process.env.PORT;
 const DB_URL = process.env.DB_URL;
 const path = require('path');
-const indexRouter = require('./routes/index');
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'pages')));
@@ -28,6 +27,12 @@ const server = app.listen(PORT, ()=>{
 })
 
 // routes
+const indexRouter = require('./routes/index');
+const projectRouter = require('./routes/project');
+const memoRouter = require('./routes/memo');
+
 app.use('/', indexRouter);
+app.use('/project', projectRouter);
+app.use('/memo', memoRouter);
 
 module.exports = app;
