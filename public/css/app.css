@@ -94,9 +94,6 @@
 .muc-board .board {
     display: none;
 }
-.muc-board .show {
-    display: block;
-}
 .search-bar {
     width: 100%;
     display: flex;
@@ -149,20 +146,21 @@
     flex: 1 1 0%;
     position: relative;
     height: 100%;
+    overflow: hidden auto;
 }
 .project-wrap {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     width: 400px;
     min-width: 400px;
+    height: 100%;
     border-right: 1px solid var(--border-main);
 
 }
 .project-wrap .project-item {
-    max-height: 93%;
     overflow-y: scroll;
-    margin-right: 0;
-    margin-bottom: 0;
+    height: 100%;
 }
 .project-wrap .project {
     width: 100%;
@@ -228,8 +226,12 @@
 }
 .project-wrap .project .project-schedule {
     background-color: var(--bg-black);
-    height: 100%;
+    max-height: 0;
+    transition: max-height ease 0.4s;
     overflow: hidden;
+}
+.project-wrap .project .open-schedule {
+    max-height: 100vh;
 }
 .project-wrap .project .project-schedule .schedule-item {
     display: flex;
@@ -261,13 +263,11 @@
     flex: 0 0 auto;
     margin-top: auto;
     width: 100%;
-    height: 7%;
 }
 .project-wrap .new-project .new-project-btn {
     width:100%;
-    padding: 28px;
+    padding: 20px;
     color: var(--color-white);
-    font-size: 16px;
     font-weight: 500;
     border-top: 1px solid var(--border-main);
 }
